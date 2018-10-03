@@ -26,7 +26,7 @@ def run_test_go_stop():
     robot.turn(90,'right')
     robot.stop()
     robot.spin('right')
-    
+
 
     time.sleep(2)
     robot.stop()
