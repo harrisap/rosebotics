@@ -26,9 +26,21 @@ class Snatch3rRobot(object):
         self.left_wheel.stop_spinning(stop_action)
         self.right_wheel.stop_spinning(stop_action)
 
-    def forward(self, drivingspeed=10):
-        self.left_wheel.start_spinning(drivingspeed)
-        self.right_wheel.start_spinning(drivingspeed)
+    def forward(self, drivespeed):
+        self.left_wheel.start_spinning(drivespeed)
+        self.right_wheel.start_spinning(drivespeed)
+
+    def turn(self, degree, wheel):
+        if wheel == 'right':
+            self.right_wheel.start_spinning(degree)
+        else:
+            self.left_wheel.start_spinning(degree)
+
+    def spin(self, wheel):
+        if wheel == 'right':
+            self.right_wheel.start_spinning(100)
+        else:
+            self.left_wheel.start_spinning(100)
 
 
 class Wheel(object):

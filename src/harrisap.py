@@ -22,6 +22,11 @@ def run_test_go_stop():
     robot = rb.Snatch3rRobot()
 
     robot.forward(20)
+    robot.stop()
+    robot.turn(90,'right')
+    robot.stop()
+    robot.spin('right')
+    
 
     time.sleep(2)
     robot.stop()
